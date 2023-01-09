@@ -1,44 +1,49 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class Usuários {
 
 	public static void main(String[] args) {
 		
 		Scanner l = new Scanner(System.in);
+		JOptionPane.showMessageDialog(null, "BEM VINDO AO CADASTRO DE USUÁRIOS");
+       // System.out.println("BEM VINDO AO CADASTRO DE USUÁRIOS");
         
-        System.out.println("BEM VINDO AO CADASTRO DE USUÁRIOS");
+        //System.out.println("Digite os dados: "+"\nNome ");
+		//JOptionPane.showMessageDialog(null, "Digite os dados: "+"\nNome ");
+		JOptionPane.showInputDialog("Digite os dados: "+"\nNome ");
+		
+       // String nome = l.nextLine();
         
-        System.out.println("Digite os dados: "+"\nNome ");
+        JOptionPane.showInputDialog("Login desejado ");
         
-        String nome = l.nextLine();
+        //String login = l.nextLine();
         
-        System.out.println("Login desejado ");
+        JOptionPane.showInputDialog("Cargo ");
         
-        String login = l.nextLine();
+        //String cargo = l.nextLine();
         
-        System.out.println("Cargo ");
+        JOptionPane.showInputDialog("Senha de acesso");
         
-        String cargo = l.nextLine();
-        
-        System.out.println("Senha de acesso");
-        
-        int senha = l.nextInt();
+        //int senha = l.nextInt();
         
         
         Dados usuario;
         
         usuario = new Dados();
         
-        usuario.setNome(nome);
-        usuario.setLogin(login);
-        usuario.setCargo(cargo);
+       // usuario.setNome(nome);
+        //usuario.setLogin(login);
+        //usuario.setCargo(cargo);
         
         
         ArrayList<Dados> usuarios = new ArrayList<Dados>();
         
         usuarios.add(usuario);
         
-        System.out.println(usuario.getNome()+"\n"+usuario.getLogin()+"\n"+usuario.getCargo());
+        //System.out.println(usuario.getNome()+"\n"+usuario.getLogin()+"\n"+usuario.getCargo());
+        JOptionPane.showMessageDialog(null,usuario.getNome()+"\n"+usuario.getLogin()+"\n"+usuario.getCargo());
      }
 }
